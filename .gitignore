@@ -1,0 +1,10 @@
+# Compilación
+build/
+*.o
+*.out
+*.exe
+rtree
+
+# Sistema / editor
+.vscode/
+.DS_Store
