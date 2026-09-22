@@ -1,6 +1,6 @@
 # Tarea 1 — Algoritmo de Prim y análisis amortizado
 
-CC4102 Diseño y Análisis de Algoritmos. Implementación del algoritmo de Prim
+Implementación del algoritmo de Prim
 sobre dos colas de prioridad distintas (binomial y de Fibonacci) y comparación
 empírica de su costo.
 
