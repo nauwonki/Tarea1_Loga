@@ -3,7 +3,12 @@ build/
 *.o
 *.out
 *.exe
-rtree
+
+# Datasets generados y resultados (no se entregan)
+data/
+datasets/
+results/
+*.csv
 
 # Sistema / editor
 .vscode/
