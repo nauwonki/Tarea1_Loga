@@ -11,7 +11,7 @@ LIB_SRC := $(filter-out $(SRC_DIR)/main.c,$(wildcard $(SRC_DIR)/*.c))
 LIB_OBJ := $(LIB_SRC:$(SRC_DIR)/%.c=$(BUILD_DIR)/%.o)
 
 EXPERIMENTS := $(BUILD_DIR)/tarea1
-TESTS       := $(BUILD_DIR)/test_graph $(BUILD_DIR)/test_fibonacci
+TESTS       := $(BUILD_DIR)/test_graph $(BUILD_DIR)/test_fibonacci $(BUILD_DIR)/test_binomial
 
 .PHONY: all test plots clean
 
@@ -30,6 +30,10 @@ $(BUILD_DIR)/test_fibonacci: $(BUILD_DIR)/graph.o $(BUILD_DIR)/measure.o \
                              $(BUILD_DIR)/test_fibonacci.o
 	$(CC) $(CFLAGS) -o $@ $^ $(LDLIBS)
 
+$(BUILD_DIR)/test_binomial: $(BUILD_DIR)/graph.o $(BUILD_DIR)/measure.o \
+							$(BUILD_DIR)/binomial.o $(BUILD_DIR)/prim_binomial.o \
+							$(BUILD_DIR)/test_binomial.o
+
 $(BUILD_DIR)/%.o: $(SRC_DIR)/%.c | $(BUILD_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@
 
@@ -43,6 +47,7 @@ $(BUILD_DIR):
 test: $(TESTS)
 	./$(BUILD_DIR)/test_graph
 	./$(BUILD_DIR)/test_fibonacci
+	./$(BUILD_DIR)/test_binomial
 
 # Procesa los CSV de results/ y deja los graficos y la tabla en figures/.
 plots:
