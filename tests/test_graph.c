@@ -216,7 +216,7 @@ static void testSmallFixture(void) {
         free(edges);
     }
 
-    printf("  MST esperado: %.2f (pendiente de verificar cuando Prim este listo)\n",
+    printf("  MST esperado: %.2f (se verifica contra Prim en test_fibonacci)\n",
            (double)SMALL10_MST_WEIGHT);
     freeGraph(g);
 }
