@@ -48,8 +48,6 @@ versiones de Prim.
 ./build/tarea1
 ```
 
-> Pendiente: todavía no está implementada la batería de experimentos.
-
 Deja los resultados en `results/`: un `runs.csv` con una fila por corrida y un
 `decrease_<cola>_<serie>_i<i>_j<j>_r<rep>.csv` por corrida instrumentada con la
 curva acumulada de `decreaseKey`.
@@ -128,6 +126,6 @@ decreaseLogFree(&log);
 - [x] Cola de Fibonacci con cortes en cascada
 - [x] Prim sobre la cola de Fibonacci
 - [x] Gráficos, tabla y verificación del MST
-- [ ] Cola binomial
-- [ ] Prim sobre la cola binomial
-- [ ] Batería de experimentos en `src/main.c`
+- [x] Cola binomial
+- [x] Prim sobre la cola binomial
+- [x] Batería de experimentos en `src/main.c`
